@@ -57,3 +57,38 @@ Example:
 Future journey timeline or pomodoro widgets should live under `apps/web/src/features/` with feature docs and tests.
 When to use:
 When new functionality starts to grow beyond a single page or requires reusable UI patterns.
+
+## Learning: Understanding `className` usage in this project
+Explanation:
+`className` strings are Tailwind utility classes applied directly to elements. They describe layout, spacing, typography, color, and responsiveness without writing new CSS for each component.
+Example:
+`className="flex min-h-[60vh] flex-col items-center justify-center text-center"` centers content vertically and horizontally using flexbox and sets a minimum height.
+When to use:
+Whenever styling a component; prefer Tailwind classes for most styles and reserve CSS files for global or reusable patterns.
+
+## Learning: Common Tailwind class patterns used here
+Explanation:
+We use a small set of layout and typography classes consistently to keep the UI minimal and aligned.
+Example:
+Layout: `flex`, `items-center`, `justify-between`, `min-h-screen`, `gap-6`, `px-6`, `py-8`.
+Typography: `text-xs`, `text-lg`, `text-4xl`, `font-semibold`, `tracking-[0.3em]`.
+Colors: `bg-zinc-950`, `bg-zinc-900`, `text-white`, `text-white/70`, `border-zinc-800`.
+Responsive: `md:px-10`, `md:py-12`, `md:text-5xl`, `lg:grid-cols-2`.
+When to use:
+Follow these patterns for new pages to keep consistency with the existing visual system.
+
+## Learning: Where the classes come from and who applies them
+Explanation:
+Tailwind classes come from the Tailwind CSS framework configured for the project (see `apps/web/src/app/globals.css` for the Tailwind import). Developers apply them in React components through `className`.
+Example:
+Navigation styles live in `apps/web/src/components/layout/SidebarNav.tsx`, while page layouts live in `apps/web/src/app/**/page.tsx`.
+When to use:
+Use Tailwind classes directly in components for most styling; keep global CSS for base setup and any shared utility classes.
+
+## Learning: How Tailwind relates to CSS and the design architecture
+Explanation:
+Tailwind compiles `className` utilities into CSS at build time. This keeps styling close to the component and aligns with the layout hierarchy: layout components define global structure, pages define content layout, and `globals.css` defines project-wide base styles.
+Example:
+`AppShell` sets the overall background and spacing; pages control their own text layout; `globals.css` holds the Tailwind import and any global rules.
+When to use:
+Use layout components for structure, page components for content, and global CSS only for base styles or cross-cutting rules.
