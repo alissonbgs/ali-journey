@@ -23,3 +23,13 @@ Reasoning:
 This keeps the App Router and RSC boundaries intact while providing lightweight transitions using built-in CSS.
 Alternatives:
 Use Framer Motion, the View Transitions API, or no transitions.
+
+## Decision: Top toolbar navigation and Apps hub
+Context:
+Navigation moved from a left sidebar to a top toolbar, and small tools should be grouped under a dedicated Apps page.
+Decision:
+Replace the sidebar layout with a top toolbar (left brand, right page links) and add an Apps route with cards linking to individual tools like Pomodoro.
+Reasoning:
+This matches the new layout direction, reduces persistent UI width, and creates a clear entry point for multiple mini-apps.
+Alternatives:
+Keep the sidebar, or expose each tool directly in the top-level navigation.
