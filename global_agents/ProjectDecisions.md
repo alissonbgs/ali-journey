@@ -33,3 +33,13 @@ Reasoning:
 This matches the new layout direction, reduces persistent UI width, and creates a clear entry point for multiple mini-apps.
 Alternatives:
 Keep the sidebar, or expose each tool directly in the top-level navigation.
+
+## Decision: Use Phosphor Icons for artwork-heavy UI
+Context:
+The portfolio will use many artistic icons and needs a consistent, expressive icon set.
+Decision:
+Adopt `@phosphor-icons/react` for icon usage across the UI.
+Reasoning:
+Phosphor provides multiple stylistic weights and a cohesive visual language, making it easier to keep icons expressive without mixing libraries.
+Alternatives:
+Lucide for a minimal style, or react-icons for broader but inconsistent sets.
