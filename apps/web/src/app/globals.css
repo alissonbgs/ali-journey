@@ -24,3 +24,53 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.page-transition {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.page-transition__surface {
+  min-height: 100%;
+  background-color: #18181b;
+  will-change: transform, opacity;
+}
+
+.page-transition[data-phase="enter"] .page-transition__surface {
+  animation: page-enter var(--page-enter-duration) ease-out;
+}
+
+.page-transition[data-phase="exit"] .page-transition__surface {
+  animation: page-exit var(--page-exit-duration) ease-in;
+}
+
+@keyframes page-enter {
+  from {
+    transform: translate3d(32px, 0, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes page-exit {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(-32px, 0, 0);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition[data-phase] .page-transition__surface {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+}

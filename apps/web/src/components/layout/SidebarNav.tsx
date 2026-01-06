@@ -119,7 +119,7 @@ export default function SidebarNav() {
 
   return (
     <nav
-      className={`w-full border-b border-zinc-200 bg-white px-4 py-3 md:sticky md:top-0 md:h-screen md:border-b-0 md:border-r md:py-8 ${
+      className={`relative z-20 w-full border-b border-zinc-800 bg-zinc-950 px-4 py-3 md:sticky md:top-0 md:h-screen md:border-b-0 md:border-r md:py-8 ${
         isCollapsed ? "md:w-20 md:px-4" : "md:w-60 md:px-6"
       }`}
     >
@@ -134,12 +134,12 @@ export default function SidebarNav() {
           }`}
         >
           {isCollapsed ? (
-            <span className="inline-flex items-center justify-center text-zinc-900">
+            <span className="inline-flex items-center justify-center text-zinc-100">
               <AIcon className="h-5 w-5" />
               <span className="sr-only">Ali Journey</span>
             </span>
           ) : (
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-400">
               Ali Journey
             </span>
           )}
@@ -147,7 +147,7 @@ export default function SidebarNav() {
             type="button"
             aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
             onClick={() => setIsCollapsed((prev) => !prev)}
-            className="flex h-8 w-8 items-center justify-center rounded-md border border-zinc-200 bg-white text-sm font-semibold text-zinc-900 transition hover:bg-zinc-100 md:absolute md:left-full md:top-1/2 md:z-10 md:-translate-y-1/2 md:translate-x-2 md:border-l-0 md:rounded-l-none"
+            className="flex h-8 w-8 items-center justify-center rounded-md border border-zinc-800 bg-zinc-950 text-sm font-semibold text-zinc-100 transition hover:bg-zinc-900 md:absolute md:left-full md:top-1/2 md:z-10 md:-translate-y-1/2 md:translate-x-2 md:border-l-0 md:rounded-l-none"
           >
             <ChevronIcon
               className={`h-4 w-4 transition-transform ${
@@ -172,8 +172,8 @@ export default function SidebarNav() {
                   isCollapsed ? "px-2 md:justify-center" : "px-3"
                 } ${
                   isActive
-                    ? "bg-zinc-900 text-white"
-                    : "text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900"
+                    ? "bg-zinc-100 text-zinc-900"
+                    : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-100"
                 }`}
               >
                 <item.Icon className="h-5 w-5" />
