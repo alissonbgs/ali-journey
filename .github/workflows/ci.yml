@@ -1,15 +1,11 @@
 name: CI
 
 on:
-  push:
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/web
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,12 +14,15 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: apps/web/package-lock.json
+          cache-dependency-path: package-lock.json
       - name: Install
-        run: npm ci
+        run: npm ci --include=optional
+      - name: Ensure Tailwind native binary
+        if: runner.os == 'Linux'
+        run: npm install --workspace apps/web --no-save --no-package-lock @tailwindcss/oxide-linux-x64-gnu
       - name: Typecheck
-        run: npm run typecheck
+        run: npm run typecheck:ui
       - name: Test
-        run: npm run test
+        run: npm run test:ui
       - name: Build
-        run: npm run build
+        run: npm run build:ui
