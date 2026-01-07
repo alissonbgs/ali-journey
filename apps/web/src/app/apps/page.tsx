@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-export default function CoolToolsPage() {
+export default function AppsPage() {
   return (
     <section className="space-y-10">
       <header className="flex flex-col items-center text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
-          Cool Tools
+          Apps
         </p>
         <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Cool Tools
