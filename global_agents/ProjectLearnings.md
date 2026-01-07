@@ -92,3 +92,11 @@ Example:
 `AppShell` sets the overall background and spacing; pages control their own text layout; `globals.css` holds the Tailwind import and any global rules.
 When to use:
 Use layout components for structure, page components for content, and global CSS only for base styles or cross-cutting rules.
+
+## Learning: RSC + client accordion split for Journey
+Explanation:
+Keep the page and data in a Server Component, and isolate accordion state in a small client component that receives serializable entries.
+Example:
+`apps/web/src/app/journey/page.tsx` renders `JourneyAccordion` with `journeyEntries` from `apps/web/src/features/journey/data.ts`.
+When to use:
+When an interactive UI needs state but you want to preserve the App Router’s RSC default and keep data definitions server-side.
