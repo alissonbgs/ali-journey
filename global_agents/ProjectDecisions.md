@@ -43,3 +43,13 @@ Reasoning:
 Phosphor provides multiple stylistic weights and a cohesive visual language, making it easier to keep icons expressive without mixing libraries.
 Alternatives:
 Lucide for a minimal style, or react-icons for broader but inconsistent sets.
+
+## Decision: Journey accordion with minimal client boundary
+Context:
+The Journey page needs expandable timeline cards while keeping the App Router RSC default intact.
+Decision:
+Keep the Journey page as a Server Component, place the accordion state/interaction in a small client component under `features/journey`, and pass a serializable data array from the page.
+Reasoning:
+This isolates interactivity to the smallest surface, preserves RSC benefits, and keeps the data/source-of-truth separate from UI state.
+Alternatives:
+Make the entire Journey page a client component or implement a CSS-only accordion without state.
