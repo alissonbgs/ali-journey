@@ -21,9 +21,9 @@ export default function SidebarNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="sticky top-0 z-20 w-full border-b border-zinc-800 bg-zinc-950 px-6 py-4">
+    <nav className="sticky top-0 z-20 w-full border-b border-zinc-800 bg-[#05040c] px-6 py-4">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-semibold tracking-[0.3em] text-white">
+        <span className="text-sm font-bold tracking-[0.3em] text-white">
           ALI
         </span>
         <div className="flex items-center gap-6">

@@ -15,7 +15,7 @@ export default function Home() {
       </p>
       <a
         href="/journey"
-        className="mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-white/50 hover:bg-white/10"
+        className="bg-[#1c1547] mt-6 inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:border-white/50 hover:bg-white/10"
       >
         <span className="inline-flex h-6 w-6 items-center justify-center text-white">
           <FlyingSaucerIcon size={20} weight="light" className="ufo-wiggle" />
