@@ -53,3 +53,13 @@ Reasoning:
 This isolates interactivity to the smallest surface, preserves RSC benefits, and keeps the data/source-of-truth separate from UI state.
 Alternatives:
 Make the entire Journey page a client component or implement a CSS-only accordion without state.
+
+## Decision: Framer Motion for Journey accordion details transitions
+Context:
+We needed delayed fade-in and exit animations for Journey details without managing manual timeouts.
+Decision:
+Adopt `framer-motion` with `AnimatePresence` + `motion.div` to handle enter/exit timing and keep the card collapse in sync with the exit animation.
+Reasoning:
+Framer Motion removes custom timer bookkeeping, provides clear enter/exit lifecycles, and keeps the visuals consistent with minimal component changes.
+Alternatives:
+Continue custom timeout management or use `@headlessui/react` Transition.
