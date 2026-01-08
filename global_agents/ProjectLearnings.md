@@ -100,3 +100,11 @@ Example:
 `apps/web/src/app/journey/page.tsx` renders `JourneyAccordion` with `journeyEntries` from `apps/web/src/features/journey/data.ts`.
 When to use:
 When an interactive UI needs state but you want to preserve the App Router’s RSC default and keep data definitions server-side.
+
+## Learning: AnimatePresence for delayed enter and clean exit
+Explanation:
+`AnimatePresence` keeps elements mounted for exit animations and avoids manual timeout coordination. Pair it with `onExitComplete` when layout changes must wait until the exit finishes.
+Example:
+`JourneyAccordionItem` uses `AnimatePresence` + `motion.div` to fade details in after a delay and to collapse the card only after the exit animation completes.
+When to use:
+When UI elements need enter/exit animations that should control unmount timing without custom timers.
