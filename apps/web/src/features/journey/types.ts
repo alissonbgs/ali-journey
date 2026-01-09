@@ -1,3 +1,5 @@
+import type { TechIconName } from "./tech-icons";
+
 export type JourneyEntry = {
   id: string;
   position: string;
@@ -5,7 +7,14 @@ export type JourneyEntry = {
   dateRange: string;
   summary: string;
   stackSummary: string;
-  technologies: string[];
+  technologies: JourneyTechIcon[];
   projects: string[];
   achievements: string[];
 };
+
+export type JourneyTechIcon = {
+  name: TechIconName;
+  label: string;
+};
+
+export type { TechIconName } from "./tech-icons";
