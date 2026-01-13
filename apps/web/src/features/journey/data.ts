@@ -7,7 +7,7 @@ export const journeyEntries: JourneyEntry[] = [
     company: "Globant Inc.",
     dateRange: "2022 — Present",
     summary: "Building high-throughput event pipelines and internal platforms.",
-    stackSummary: "TypeScript, Node, Express, Postgres, React, Tailwind",
+    stackSummary: "NodeJS, Express, Postgres, ReactJS, Tailwind, Jest",
     technologies: [
       { name: "typescript", label: "TypeScript" },
       { name: "node", label: "Node.js" },
@@ -22,23 +22,23 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "react", label: "React" },
       { name: "tailwind", label: "Tailwind" },
       { name: "githubActions", label: "GitHub Actions" },
+      { name: "eslint", label: "ESLint" },
     ],
-    projects: [
-      "Event ingestion service for real-time analytics.",
-      "Internal tooling for release orchestration and metrics.",
-    ],
-    achievements: [
-      "Reduced processing latency by ~40% through batching improvements.",
-      "Improved reliability with automated backfill and retry logic.",
+    highlights: [
+      "Implemented Kafka queuing and retry strategies in the high volume leads pipeline",
+      "Reduced sprint rework by enforcing CI/CD automations test with Jest via GitHub Actions",
+      "Lowered time to detect and fix bugs with real-time observability (Grafana + Jira alerts).",
+      "Migrated large services from JavaScript to TypeScript.",
+      "Implemented Salesforce integrations from owned UIs (NodeJS, ReactJS, Salesforce)."
     ],
   },
   {
     id: "find-my-profession",
     position: "Fullstack Engineer",
-    company: "Find My Profession",
+    company: "Find My Profession Inc.",
     dateRange: "2021 — 2022",
     summary: "Shipped customer dashboards and design systems for B2B SaaS.",
-    stackSummary: "PHP, MySQL, Node, MongoDB, AngularJS, ReactJs",
+    stackSummary: "PHP, MySQL, NodeJS, MongoDB, AngularJS, ReactJS",
     technologies: [
       { name: "react", label: "React" },
       { name: "node", label: "Node.js" },
@@ -48,13 +48,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "mongodb", label: "MongoDB" },
       { name: "javascript", label: "JavaScript" },
     ],
-    projects: [
+    highlights: [
       "Modular dashboard builder for enterprise clients.",
       "Design system migration with tokenized theming.",
-    ],
-    achievements: [
-      "Cut feature delivery time by ~30% with shared UI primitives.",
-      "Increased weekly active usage by ~20% after UX refresh.",
     ],
   },
   {
@@ -63,7 +59,7 @@ export const journeyEntries: JourneyEntry[] = [
     company: "Smarkio (Zenvia)",
     dateRange: "2019 — 2021",
     summary: "Built APIs and tooling that improved developer velocity.",
-    stackSummary: "PHP, CodeIgniter, Node, Express, Jest, AWS, Docker",
+    stackSummary: "PHP, CodeIgniter, NodeJS, Express, Jest, AWS, Docker",
     technologies: [
       { name: "php", label: "PHP" },
       { name: "codeIgniter", label: "Code Igniter" },
@@ -73,13 +69,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "icloud", label: "AWS" },
       { name: "express", label: "Express" },
     ],
-    projects: [
+    highlights: [
       "Internal API gateway with auditing and rate limiting.",
       "Developer CLI for environment provisioning.",
-    ],
-    achievements: [
-      "Reduced onboarding time from days to hours with automation.",
-      "Stabilized deployments by improving rollback tooling.",
     ],
   },
   {
@@ -95,13 +87,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "csharp", label: "C#" },
       { name: "mysql", label: "MySQL" },
     ],
-    projects: [
+    highlights: [
       "Internal API gateway with auditing and rate limiting.",
       "Developer CLI for environment provisioning.",
-    ],
-    achievements: [
-      "Reduced onboarding time from days to hours with automation.",
-      "Stabilized deployments by improving rollback tooling.",
     ],
   },
   {
@@ -117,13 +105,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "tensorflow", label: "Tensorflow" },
       { name: "opencv", label: "Opencv" },
     ],
-    projects: [
+    highlights: [
       "Internal API gateway with auditing and rate limiting.",
       "Developer CLI for environment provisioning.",
-    ],
-    achievements: [
-      "Reduced onboarding time from days to hours with automation.",
-      "Stabilized deployments by improving rollback tooling.",
     ],
   },
 ];

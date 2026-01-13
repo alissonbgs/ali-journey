@@ -26,15 +26,16 @@ const createStars = (count: number, width: number, height: number): Star[] => {
 
   for (let i = 0; i < count; i += 1) {
     const depth = Math.random() * 0.45 + 0.15;
+    const radius = Math.random() * 1.4 + 0.3;
     stars.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      radius: Math.random() * 1.4 + 0.3,
+      radius: radius,
       alpha: Math.random() * 0.5 + 0.35,
       twinkle: Math.random() * 2 + 0.5,
-      speed: (Math.random() * 0.18 + 0.02) * depth,
+      speed: (Math.random() * (depth >= 1 ? 100 : 5 + 0.02)) * depth,
       depth,
-      direction: (Math.random() * 1.4 + 0.3) >= 1 ? 1 : -1,
+      direction: (radius >= 1) ? 1 : -1,
     });
   }
 

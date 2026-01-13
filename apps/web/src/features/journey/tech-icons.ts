@@ -32,7 +32,8 @@ import {
   siCplusplus,
   siDotnet,
   siSap,
-  siSharp
+  siSharp,
+  siEslint
 } from "simple-icons";
 
 export const TECH_ICON_MAP = {
@@ -69,6 +70,7 @@ export const TECH_ICON_MAP = {
   dotnet: siDotnet,
   sap: siSap,
   csharp: siSharp,
+  eslint: siEslint
 } satisfies Record<string, SimpleIcon>;
 
 export type TechIconName = keyof typeof TECH_ICON_MAP;

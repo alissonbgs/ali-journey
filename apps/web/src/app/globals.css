@@ -36,6 +36,24 @@ h3 {
     sans-serif;
 }
 
+.minimal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+
+.minimal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+
 .ufo-wiggle {
   display: block;
   transform-origin: 50% 50%;

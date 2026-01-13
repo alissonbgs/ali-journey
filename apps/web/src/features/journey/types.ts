@@ -8,8 +8,8 @@ export type JourneyEntry = {
   summary: string;
   stackSummary: string;
   technologies: JourneyTechIcon[];
-  projects: string[];
-  achievements: string[];
+  projects?: string[];
+  highlights: string[];
 };
 
 export type JourneyTechIcon = {

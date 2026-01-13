@@ -112,8 +112,8 @@ function JourneyAccordionItem({
           aria-controls={`${entry.id}-details`}
           className={`w-full px-10 py-6 text-left transition transition-colors duration-300 ${GRADIENT_CLASS} md:text-left`}
         >
-          <div className="flex items-center justify-between gap-6">
-            <div className="w-full space-y-2 md:w-[26rem] md:shrink-0 md:text-left">
+          <div className="flex items-center gap-6">
+            <div className="w-full space-y-2 md:w-104 md:shrink-0 md:text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
                 {entry.position}
               </p>
@@ -126,19 +126,19 @@ function JourneyAccordionItem({
               <p className="text-sm text-white/70">{entry.summary}</p>
               <p className="text-sm text-white/60">{entry.stackSummary}</p>
             </div>
-            <div className="overflow-hidden">
+            <div className="flex-1 min-w-0 overflow-hidden">
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
                     id={`${entry.id}-details`}
                     aria-hidden={!isOpen}
-                    className={`relative overflow-hidden px-10 text-sm text-white/70 before:absolute before:left-0 before:top-3 before:bottom-3 before:w-px before:bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.35),transparent)] before:content-[''] ${
+                    className={`relative overflow-hidden px-10 text-sm text-white/70 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.35),transparent)] before:content-[''] ${
                       isOpen ? "" : "pointer-events-none"
                     }`}
                     initial={{ opacity: 0, height: 0 }}
                     animate={{
                       opacity: 1,
-                      height: 100,
+                      height: "auto",
                     }}
                     exit={{
                       opacity: 0,
@@ -156,24 +156,14 @@ function JourneyAccordionItem({
                       },
                     }}
                   >
-                    <div className="mt-2 grid gap-4 md:grid-cols-2">
+                    <div className="grid md:grid-cols-1 items-center">
                       <div>
                         <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-                          Technologies
+                          Highlights
                         </h3>
-                        <ul className="grid md:grid-cols-2 mt-2 list-disc list-inside space-y-1">
-                          {entry.technologies.map((tech) => (
-                            <li key={tech.name}>{tech.label}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-                          Projects
-                        </h3>
-                        <ul className="mt-2 list-disc list-inside space-y-1">
-                          {entry.projects.map((project) => (
-                            <li key={project}>{project}</li>
+                        <ul className="minimal-scrollbar mt-1 max-h-30 list-disc list-inside space-y-1 overflow-y-auto pr-2">
+                          {entry.highlights.map((highlight) => (
+                            <li key={highlight}>{highlight}</li>
                           ))}
                         </ul>
                       </div>
@@ -183,7 +173,7 @@ function JourneyAccordionItem({
               </AnimatePresence>
             </div>
             <span
-              className={`mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full text-white/70 transition-transform ${
+              className={`mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/70 transition-transform ${
                 isOpen ? "rotate-180" : "rotate-0"
               }`}
               style={{
@@ -291,7 +281,7 @@ export default function JourneyAccordion({ entries }: JourneyAccordionProps) {
   const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 ">
       {entries.map((entry) => {
         const isOpen = openIds.has(entry.id);
 
