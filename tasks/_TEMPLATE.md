@@ -43,7 +43,7 @@ What must be true when this task is complete? (1–3 bullet points)
 - ...
 
 ## Files (expected)
-- `apps/web/...`
+- `web/...`
 - `...`
 
 ## Verification
@@ -54,3 +54,4 @@ What must be true when this task is complete? (1–3 bullet points)
 ## Logging checklist
 - [ ] If I made/changed an architectural or design decision: updated `ProjectDecisions.md`
 - [ ] If I learned something or introduced a new pattern: updated `ProjectLearnings.md`
+

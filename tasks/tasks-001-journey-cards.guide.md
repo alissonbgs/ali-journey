@@ -1,8 +1,8 @@
 # Task — Journey Page Expandable Timeline Cards (RSC + Tailwind)
 
-## Agents to use
-- **Frontend Engineer Agent** (`apps/web/AGENTS.md`): implementation of UI and behavior
-- **Tech Lead Reviewer & Mentor** (`AGENTS.tech-lead-reviewer.md`): validate tech design decisions, RSC/client boundaries, SOLID, and update logs
+## Skills to use
+- **Frontend Engineer Skill** (`skills/frontend-engineer/SKILL.md`): implementation of UI and behavior
+- **Tech Lead Reviewer & Mentor** (`skills/tech-lead-reviewer/SKILL.md`): validate tech design decisions, RSC/client boundaries, SOLID, and update logs
 
 ---
 
@@ -127,8 +127,8 @@ Repeat for Job 2 and Job 3.
 ---
 
 ## Files expected
-- `apps/web/app/journey/page.tsx` (or equivalent route)
-- `apps/web/features/journey/*` or `apps/web/components/*`
+- `web/app/journey/page.tsx` (or equivalent route)
+- `web/features/journey/*` or `web/components/*`
 - Updates to:
   - `ProjectDecisions.md`
   - `ProjectLearnings.md`
@@ -139,3 +139,4 @@ Repeat for Job 2 and Job 3.
 - `npm run typecheck`
 - `npm run test` (if tests exist; at least a basic render/interaction test if feasible)
 - `npm run build`
+

@@ -2,14 +2,14 @@
   "name": "ali-journey",
   "private": true,
   "workspaces": [
-    "apps/*"
+    "web"
   ],
   "scripts": {
-    "start:ui": "npm --workspace apps/web run dev",
-    "build:ui": "npm --workspace apps/web run build",
-    "test:ui": "npm --workspace apps/web run test",
-    "typecheck:ui": "npm --workspace apps/web run typecheck",
-    "lint:ui": "npm --workspace apps/web run lint",
+    "start:ui": "npm --workspace web run dev",
+    "build:ui": "npm --workspace web run build",
+    "test:ui": "npm --workspace web run test",
+    "typecheck:ui": "npm --workspace web run typecheck",
+    "lint:ui": "npm --workspace web run lint",
     "start:bff": "npm --workspace apps/bff run dev",
     "build:bff": "npm --workspace apps/bff run build",
     "test:bff": "npm --workspace apps/bff run test",

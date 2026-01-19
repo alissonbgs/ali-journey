@@ -33,7 +33,7 @@ Use Next’s official initializer:
 - Choose Tailwind
 - Use App Router (important for RSC-first)
 
-Suggested app folder name: `apps/web`
+Suggested app folder name: `web`
 
 ### 3) Add strict TypeScript rules
 - Ensure `strict: true` in `tsconfig.json`
@@ -53,7 +53,7 @@ Suggested app folder name: `apps/web`
 - Add a test script `npm run test`
 
 ### 6) Create scalable folder structure (RSC-first)
-In `apps/web/src` (or inside `apps/web` depending on your setup), standardize:
+In `web/src` (or inside `web` depending on your setup), standardize:
 
 - `app/` for routes (RSC default)
 - `components/` shared UI components
@@ -110,3 +110,4 @@ Reserve structure:
 - `npm run build` passes
 - CI passes on PR
 - `ProjectDecisions.md` + `ProjectLearnings.md` exist and are being updated
+

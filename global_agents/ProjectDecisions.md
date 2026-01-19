@@ -12,7 +12,7 @@ Alternatives:
 
 ## Initial setup
 - Next.js App Router (RSC-first), TypeScript strict, Tailwind, Jest + RTL, and CI with GitHub Actions.
-- Monorepo-ready layout with `apps/web` and reserved structure for a future `apps/bff`.
+- Monorepo-ready layout with `web` and reserved structure for a future `apps/bff`.
 
 ## Decision: CSS-based page slide transitions
 Context:
@@ -63,3 +63,14 @@ Reasoning:
 Framer Motion removes custom timer bookkeeping, provides clear enter/exit lifecycles, and keeps the visuals consistent with minimal component changes.
 Alternatives:
 Continue custom timeout management or use `@headlessui/react` Transition.
+
+## Decision: Package guidance as Codex skills
+Context:
+We had local guidance markdown files scattered across directories.
+Decision:
+Move guidance into packaged skills under `skills/` with SKILL.md frontmatter and references for longer docs.
+Reasoning:
+This aligns with Codex skill format, enables progressive disclosure, and centralizes discovery.
+Alternatives:
+Keep ad-hoc SKILLS.md files or maintain a mixed approach.
+
