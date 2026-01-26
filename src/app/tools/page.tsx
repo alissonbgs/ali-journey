@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function AppsPage() {
   return (
     <section className="space-y-10">
@@ -16,16 +14,20 @@ export default function AppsPage() {
       </header>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <Link
-          href="/pomodoro"
+        <a
+          href="https://adhdoro.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6 transition hover:border-zinc-600 hover:bg-zinc-900"
         >
-          <h2 className="text-lg font-semibold text-white">Pomodoro</h2>
+          <h2 className="text-lg font-semibold text-white">ADHDoro</h2>
           <p className="mt-2 text-sm text-white/70">
-            A focused timer to structure deep work sessions in short, calm
-            intervals.
+            A Pomodoro timer tuned for ADHD-friendly focus and gentle resets.
           </p>
-        </Link>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
+            Work in progres. New features soon...
+          </p>
+        </a>
         <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6">
           <h2 className="text-lg font-semibold text-white">
             Video Suggestor
