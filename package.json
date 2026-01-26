@@ -1,20 +1,18 @@
 {
   "name": "ali-journey",
   "private": true,
-  "workspaces": [
-    "web"
-  ],
   "scripts": {
-    "start:ui": "npm --workspace web run dev",
-    "build:ui": "npm --workspace web run build",
-    "test:ui": "npm --workspace web run test",
-    "typecheck:ui": "npm --workspace web run typecheck",
-    "lint:ui": "npm --workspace web run lint",
-    "start:bff": "npm --workspace apps/bff run dev",
-    "build:bff": "npm --workspace apps/bff run build",
-    "test:bff": "npm --workspace apps/bff run test",
-    "typecheck:bff": "npm --workspace apps/bff run typecheck",
-    "lint:bff": "npm --workspace apps/bff run lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "start:ui": "npm run dev",
+    "build:ui": "npm run build",
+    "test:ui": "npm run test",
+    "typecheck:ui": "npm run typecheck",
+    "lint:ui": "npm run lint"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

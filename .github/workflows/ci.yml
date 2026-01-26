@@ -19,7 +19,7 @@
 #        run: npm ci --include=optional
 #      - name: Ensure Tailwind native binary
 #        if: runner.os == 'Linux'
-#        run: npm install --workspace web --no-save --no-package-lock @tailwindcss/oxide-linux-x64-gnu
+#        run: npm install --no-save --no-package-lock @tailwindcss/oxide-linux-x64-gnu
 #      - name: Typecheck
 #        run: npm run typecheck:ui
 #      - name: Test

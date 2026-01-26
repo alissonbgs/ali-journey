@@ -84,3 +84,13 @@ This provides a consistent spec-first workflow and a single home for change arti
 Alternatives:
 Continue using ad-hoc task guides under `tasks/` only.
 
+## Decision: Flatten Next.js app to a single root package
+Context:
+The repo should have one `node_modules` and no BFF package, with scripts and dependencies consolidated at the root.
+Decision:
+Move the Next.js app and configs from `web/` to the repository root and drop workspace/BFF scripts.
+Reasoning:
+This simplifies dependency management, removes the extra package boundary, and aligns the scripts with a single-package setup.
+Alternatives:
+Keep workspaces with hoisted dependencies, or keep `web/` as a package and only prune unused BFF scripts.
+

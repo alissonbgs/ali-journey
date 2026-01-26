@@ -43,7 +43,7 @@ What must be true when this task is complete? (1–3 bullet points)
 - ...
 
 ## Files (expected)
-- `web/...`
+- `src/...`
 - `...`
 
 ## Verification

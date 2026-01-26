@@ -5,7 +5,7 @@ description: Repo-wide rules, task workflow, and quality gates for this portfoli
 
 # Repo Orchestrator
 
-Build a modern portfolio project with Next.js App Router and React Server Components (RSC) by default. Scale to complex UI and keep the repo future-ready for a BFF.
+Build a modern portfolio project with Next.js App Router and React Server Components (RSC) by default. Scale to complex UI with a single-package layout.
 
 ## Tech stack (authoritative)
 - Use TypeScript.
@@ -13,7 +13,6 @@ Build a modern portfolio project with Next.js App Router and React Server Compon
 - Use Jest for tests (existing tooling).
 - Use GitHub Actions for CI.
 - Deploy with Vercel now; plan for AWS/K8s later.
-- Plan for a future BFF (Node/Fastify) but do not add it yet.
 
 ## Frontend global standard
 - Use Next.js as the only frontend framework.
@@ -23,7 +22,7 @@ Build a modern portfolio project with Next.js App Router and React Server Compon
 
 ## SOLID (mandatory)
 - Enforce SOLID in architecture and module boundaries.
-- When the BFF exists, introduce controllers/services/repositories, but keep frontend SRP/DIP and composition-first design now.
+- Keep frontend SRP/DIP and composition-first design.
 
 ## Task system (mandatory)
 ### Tasks live in `/tasks`
@@ -36,7 +35,7 @@ Build a modern portfolio project with Next.js App Router and React Server Compon
 - Record durable truth in:
   - `ProjectDecisions.md` for architecture/design decisions.
   - `ProjectLearnings.md` for general learnings and patterns.
-  - `web/src/features/<feature>/FEATURE.md` when applicable.
+  - `src/features/<feature>/FEATURE.md` when applicable.
 
 ### Required task lifecycle
 - Use states: OPEN -> IN_PROGRESS -> DONE -> ARCHIVED.

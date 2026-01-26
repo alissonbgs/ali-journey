@@ -127,8 +127,8 @@ Repeat for Job 2 and Job 3.
 ---
 
 ## Files expected
-- `web/app/journey/page.tsx` (or equivalent route)
-- `web/features/journey/*` or `web/components/*`
+- `src/app/journey/page.tsx` (or equivalent route)
+- `src/features/journey/*` or `src/components/*`
 - Updates to:
   - `ProjectDecisions.md`
   - `ProjectLearnings.md`

@@ -10,27 +10,27 @@ When to use:
 ## Notes
 - Add learnings here as the project evolves.
 
-## Learning: Monorepo split between web and future BFF
+## Learning: Single-package Next.js app at the repo root
 Explanation:
-The repo is organized under `apps/` to keep the Next.js frontend isolated from the future backend-for-frontend. This keeps deployment and dependency boundaries clear.
+The repo uses a single root package for the Next.js app, so scripts and dependencies live in the root `package.json`.
 Example:
-`web` contains the Next.js app; `apps/bff` is reserved for a future Node/Fastify API layer.
+`src` contains the App Router code, and the root scripts run `dev`, `build`, and `test`.
 When to use:
-When you want clear separation between UI and API layers without blocking future backend work.
+When you want a single `node_modules` and a simpler project layout without workspace boundaries.
 
 ## Learning: Web app folder structure and ownership
 Explanation:
-The Next.js App Router lives under `web/src/app`, shared layout components live under `web/src/components/layout`, and shared UI primitives should go under `web/src/components/ui` per local rules.
+The Next.js App Router lives under `src/app`, shared layout components live under `src/components/layout`, and shared UI primitives should go under `src/components/ui` per local rules.
 Example:
-`web/src/app/layout.tsx` hosts the root layout, while `web/src/components/layout/AppShell.tsx` owns the shell and sidebar.
+`src/app/layout.tsx` hosts the root layout, while `src/components/layout/AppShell.tsx` owns the shell and sidebar.
 When to use:
 When adding new pages, layouts, or shared components to keep boundaries consistent and scalable.
 
 ## Learning: Pages and sidebar implementation pattern
 Explanation:
-Pages are file-based routes in the App Router (`web/src/app/**/page.tsx`) and the sidebar is a layout component with a minimal client boundary for interactivity.
+Pages are file-based routes in the App Router (`src/app/**/page.tsx`) and the sidebar is a layout component with a minimal client boundary for interactivity.
 Example:
-`web/src/components/layout/SidebarNav.tsx` is a client component that handles active route state and collapse toggle; `AppShell` is server-rendered and wraps all pages.
+`src/components/layout/SidebarNav.tsx` is a client component that handles active route state and collapse toggle; `AppShell` is server-rendered and wraps all pages.
 When to use:
 When adding navigation or global UI that must appear on every page without duplicating markup in each route.
 
@@ -46,7 +46,7 @@ When building shared UI to minimize client bundles and keep layout components si
 Explanation:
 Use a small client wrapper keyed by `usePathname` to trigger CSS keyframes, keeping the page surface and text aligned during transitions.
 Example:
-`web/src/components/layout/PageTransition.tsx` with `.page-transition__surface` keyframes in `web/src/app/globals.css`.
+`src/components/layout/PageTransition.tsx` with `.page-transition__surface` keyframes in `src/app/globals.css`.
 When to use:
 When you need lightweight page transitions without adding an animation library.
 
@@ -54,7 +54,7 @@ When you need lightweight page transitions without adding an animation library.
 Explanation:
 As the app grows, move page-specific UI into `features/` and promote reusable pieces into `components/ui` or `components/layout`. Add tests for navigation and layout behavior.
 Example:
-Future journey timeline or pomodoro widgets should live under `web/src/features/` with feature docs and tests.
+Future journey timeline or pomodoro widgets should live under `src/features/` with feature docs and tests.
 When to use:
 When new functionality starts to grow beyond a single page or requires reusable UI patterns.
 
@@ -79,9 +79,9 @@ Follow these patterns for new pages to keep consistency with the existing visual
 
 ## Learning: Where the classes come from and who applies them
 Explanation:
-Tailwind classes come from the Tailwind CSS framework configured for the project (see `web/src/app/globals.css` for the Tailwind import). Developers apply them in React components through `className`.
+Tailwind classes come from the Tailwind CSS framework configured for the project (see `src/app/globals.css` for the Tailwind import). Developers apply them in React components through `className`.
 Example:
-Navigation styles live in `web/src/components/layout/SidebarNav.tsx`, while page layouts live in `web/src/app/**/page.tsx`.
+Navigation styles live in `src/components/layout/SidebarNav.tsx`, while page layouts live in `src/app/**/page.tsx`.
 When to use:
 Use Tailwind classes directly in components for most styling; keep global CSS for base setup and any shared utility classes.
 
@@ -97,7 +97,7 @@ Use layout components for structure, page components for content, and global CSS
 Explanation:
 Keep the page and data in a Server Component, and isolate accordion state in a small client component that receives serializable entries.
 Example:
-`web/src/app/journey/page.tsx` renders `JourneyAccordion` with `journeyEntries` from `web/src/features/journey/data.ts`.
+`src/app/journey/page.tsx` renders `JourneyAccordion` with `journeyEntries` from `src/features/journey/data.ts`.
 When to use:
 When an interactive UI needs state but you want to preserve the App Router’s RSC default and keep data definitions server-side.
 

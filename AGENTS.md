@@ -7,10 +7,10 @@
 - Create a change with `npx openspec new change <change-name>` before coding.
 
 ## App conventions
-- Next.js App Router lives in `web/` (RSC-first).
+- Next.js App Router lives at the repo root in `src/` (RSC-first).
 - Keep client components minimal and interaction-focused.
 - Tailwind for styling; TypeScript strict (no `any`).
-- `apps/bff/` is reserved for a future backend-for-frontend.
+- Keep the repo single-package; no BFF package.
 
 ## Quality and logging
 - UI scripts: `npm run typecheck:ui`, `npm run test:ui`, `npm run build:ui`.

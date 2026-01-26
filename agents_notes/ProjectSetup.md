@@ -5,7 +5,7 @@
 - Tailwind for styling.
 - Strong quality gates: TS strictness, tests, CI.
 - Architecture designed to scale to complex UI (animations, pagination, content, search).
-- Future-ready for a BFF (Backend-for-Frontend) without reshaping the whole repo.
+- Single-package Next.js app with scripts and deps at the repo root.
 
 ---
 
@@ -16,7 +16,6 @@
 - Tests: Jest (and React Testing Library)
 - CI: GitHub Actions
 - Deploy (now): Vercel recommended
-- Future: add BFF (Node/Fastify) as a separate app inside the repo
 
 ---
 
@@ -33,7 +32,7 @@ Use Next’s official initializer:
 - Choose Tailwind
 - Use App Router (important for RSC-first)
 
-Suggested app folder name: `web`
+Use the repository root (no subfolder) for the app.
 
 ### 3) Add strict TypeScript rules
 - Ensure `strict: true` in `tsconfig.json`
@@ -53,7 +52,7 @@ Suggested app folder name: `web`
 - Add a test script `npm run test`
 
 ### 6) Create scalable folder structure (RSC-first)
-In `web/src` (or inside `web` depending on your setup), standardize:
+In `src`, standardize:
 
 - `app/` for routes (RSC default)
 - `components/` shared UI components
@@ -95,13 +94,6 @@ Rule:
 - Any architectural/design decision must be recorded in `ProjectDecisions.md`
 - Any lesson or best-practice learned must be recorded in `ProjectLearnings.md`
 
-### 11) Future BFF plan (do not implement now)
-Reserve structure:
-- `apps/bff/` will be added later
-- The web app will call `/api/*` routes or a BFF base URL
-- Keep a `lib/api/` layer on the web app to centralize fetch logic:
-  - easy to swap from “mock/local content” to “BFF-backed data”
-
 ---
 
 ## Verification Checklist
@@ -110,4 +102,5 @@ Reserve structure:
 - `npm run build` passes
 - CI passes on PR
 - `ProjectDecisions.md` + `ProjectLearnings.md` exist and are being updated
+
 
