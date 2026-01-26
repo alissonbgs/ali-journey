@@ -26,6 +26,17 @@ export default function AppsPage() {
             intervals.
           </p>
         </Link>
+        <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6">
+          <h2 className="text-lg font-semibold text-white">
+            Video Suggestion
+          </h2>
+          <p className="mt-2 text-sm text-white/70">
+            Find great videos about any subject.
+          </p>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
+            Coming soon...
+          </p>
+        </div>
       </div>
     </section>
   );
