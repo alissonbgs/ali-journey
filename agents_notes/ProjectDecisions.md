@@ -74,3 +74,13 @@ This aligns with Codex skill format, enables progressive disclosure, and central
 Alternatives:
 Keep ad-hoc SKILLS.md files or maintain a mixed approach.
 
+## Decision: Adopt OpenSpec for spec-driven changes
+Context:
+We want a structured workflow for proposals, tasks, and specs that can be shared with AI tools.
+Decision:
+Initialize OpenSpec and store specs under `openspec/specs` and change artifacts under `openspec/changes`.
+Reasoning:
+This provides a consistent spec-first workflow and a single home for change artifacts.
+Alternatives:
+Continue using ad-hoc task guides under `tasks/` only.
+
