@@ -110,9 +110,9 @@ function JourneyAccordionItem({
           onClick={onToggle}
           aria-expanded={isOpen}
           aria-controls={`${entry.id}-details`}
-          className={`w-full px-10 py-6 text-left transition transition-colors duration-300 ${GRADIENT_CLASS} md:text-left`}
+          className={`w-full px-6 py-6 text-left transition transition-colors duration-300 md:px-10 ${GRADIENT_CLASS} md:text-left`}
         >
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center">
             <div className="w-full space-y-2 md:w-104 md:shrink-0 md:text-left">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">
                 {entry.position}
@@ -126,13 +126,13 @@ function JourneyAccordionItem({
               <p className="text-sm text-white/70">{entry.summary}</p>
               <p className="text-sm text-white/60">{entry.stackSummary}</p>
             </div>
-            <div className="flex-1 min-w-0 overflow-hidden">
+            <div className="w-full min-w-0 overflow-hidden md:flex-1">
               <AnimatePresence>
                 {isOpen && (
                   <motion.div
                     id={`${entry.id}-details`}
                     aria-hidden={!isOpen}
-                    className={`relative overflow-hidden px-10 text-sm text-white/70 before:absolute before:left-0 before:top-2 before:bottom-2 before:w-px before:bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.35),transparent)] before:content-[''] ${
+                    className={`relative overflow-hidden px-0 text-sm text-white/70 md:px-10 md:before:absolute md:before:left-0 md:before:top-2 md:before:bottom-2 md:before:w-px md:before:bg-[linear-gradient(180deg,transparent,rgba(255,255,255,0.35),transparent)] md:before:content-[''] ${
                       isOpen ? "" : "pointer-events-none"
                     }`}
                     initial={{ opacity: 0, height: 0 }}
@@ -156,7 +156,7 @@ function JourneyAccordionItem({
                       },
                     }}
                   >
-                    <div className="grid md:grid-cols-1 items-center">
+                    <div className="grid items-center gap-4 md:grid-cols-1">
                       <div>
                         <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
                           Highlights
@@ -167,13 +167,55 @@ function JourneyAccordionItem({
                           ))}
                         </ul>
                       </div>
+                      {entry.technologies.length > 0 && (
+                        <div className="md:hidden">
+                          <h4 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+                            Tech
+                          </h4>
+                          <div className="minimal-scrollbar mt-2 flex gap-3 overflow-x-auto pb-2">
+                            {entry.technologies.map((techIcon) => {
+                              const icon = TECH_ICON_MAP[techIcon.name];
+                              if (!icon) {
+                                return null;
+                              }
+                              const iconColor = `#${icon.hex}`;
+                              const labelId = `${entry.id}-${techIcon.name}-label-mobile`;
+
+                              return (
+                                <div
+                                  key={`${entry.id}-${techIcon.name}-mobile`}
+                                  className="flex shrink-0 flex-col items-center gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/70 px-3 py-2"
+                                >
+                                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5">
+                                    <svg
+                                      role="img"
+                                      aria-labelledby={labelId}
+                                      viewBox="0 0 24 24"
+                                      className="h-6 w-6"
+                                      fill={iconColor}
+                                    >
+                                      <title id={labelId}>
+                                        {techIcon.label}
+                                      </title>
+                                      <path d={icon.path} />
+                                    </svg>
+                                  </span>
+                                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
+                                    {techIcon.label}
+                                  </span>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
             <span
-              className={`mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/70 transition-transform ${
+              className={`mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center self-end rounded-full text-white/70 transition-transform md:self-auto ${
                 isOpen ? "rotate-180" : "rotate-0"
               }`}
               style={{
