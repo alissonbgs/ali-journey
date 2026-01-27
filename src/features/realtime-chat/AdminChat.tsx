@@ -547,6 +547,10 @@ export default function AdminChat() {
       setAuthError("Enter your email first.");
       return;
     }
+    if (trimmed.toLowerCase() !== OWNER_EMAIL.toLowerCase()) {
+      setAuthError("Only the owner email can request a magic link.");
+      return;
+    }
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmed,
       options: { emailRedirectTo: window.location.href },
