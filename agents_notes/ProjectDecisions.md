@@ -94,3 +94,23 @@ This simplifies dependency management, removes the extra package boundary, and a
 Alternatives:
 Keep workspaces with hoisted dependencies, or keep `web/` as a package and only prune unused BFF scripts.
 
+## Decision: Supabase Auth + owner allowlist for realtime chat admin access
+Context:
+The realtime chat admin view must be restricted to the portfolio owner for long-term use.
+Decision:
+Use Supabase Auth with an owner allowlist check to gate the admin view.
+Reasoning:
+Supabase Auth integrates directly with Realtime, supports secure sessions, and allows simple server-side gating by email.
+Alternatives:
+Secret admin URL with token, basic password login, or IP allowlist.
+
+## Decision: Supabase as realtime chat backend
+Context:
+We need presence-aware chat without operating our own realtime infrastructure.
+Decision:
+Use Supabase (Auth + Realtime + Postgres) for presence tracking and message storage.
+Reasoning:
+Supabase provides hosted realtime channels, built-in auth, and a Postgres store with RLS for a fast, maintainable implementation.
+Alternatives:
+Custom Postgres + Redis presence with AWS WebSocket or self-hosted WebSocket/SSE.
+
