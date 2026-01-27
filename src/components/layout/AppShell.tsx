@@ -1,5 +1,6 @@
 import GalaxyBackground from "./GalaxyBackground";
 import SidebarNav from "./SidebarNav";
+import ChatWidget from "@/features/realtime-chat/ChatWidget";
 
 type AppShellProps = {
   children: React.ReactNode;
@@ -14,6 +15,7 @@ export default function AppShell({ children }: AppShellProps) {
         <main className="flex-1 px-6 py-8 md:px-10 md:py-12">
           {children}
         </main>
+        <ChatWidget />
       </div>
     </div>
   );
