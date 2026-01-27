@@ -551,9 +551,14 @@ export default function AdminChat() {
       setAuthError("Only the owner email can request a magic link.");
       return;
     }
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+    const redirectTo = siteUrl
+      ? `${siteUrl}/admin/chat`
+      : window.location.href;
+
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmed,
-      options: { emailRedirectTo: window.location.href },
+      options: { emailRedirectTo: redirectTo },
     });
     if (error) {
       setAuthError("Could not send magic link.");
