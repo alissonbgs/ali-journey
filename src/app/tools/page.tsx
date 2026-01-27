@@ -22,10 +22,10 @@ export default function AppsPage() {
         >
           <h2 className="text-lg font-semibold text-white">ADHDoro</h2>
           <p className="mt-2 text-sm text-white/70">
-            A Pomodoro timer tuned for ADHD-friendly focus and gentle resets.
+            A Pomodoro timer tuned for ADHD-friendly focus.
           </p>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
-            Work in progres. New features soon...
+          <p className="mt-3 text-xs font-semibold tracking-[0.3em] text-white/50">
+            Work in progress. New features soon...
           </p>
         </a>
         <div className="rounded-3xl border border-zinc-800 bg-zinc-900/60 p-6">
@@ -35,7 +35,7 @@ export default function AppsPage() {
           <p className="mt-2 text-sm text-white/70">
             Find great videos about any subject.
           </p>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
+          <p className="mt-3 text-xs font-semibold tracking-[0.3em] text-white/50">
             Coming soon...
           </p>
         </div>
