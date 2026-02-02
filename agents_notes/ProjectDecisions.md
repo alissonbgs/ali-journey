@@ -124,3 +124,33 @@ This satisfies the user request with the smallest safe change and avoids acciden
 Alternatives:
 Move job content to another source; out of scope for this request.
 
+## Decision: Home page portfolio refresh with a dedicated Connect section
+Context:
+The home page was hero-only and needed a minimalist vertical portfolio structure with required sections for tech info, soft skills, and interests.
+Decision:
+Keep the original hero at the top, add a scroll cue into the profile content, and structure the portfolio into four sections: Tech, Soft Skills, Interests, and a final Connect section containing GitHub and LinkedIn actions with icons.
+Reasoning:
+The extra Connect section keeps required content focused while creating a strong closing CTA for profile actions, and preserving the old hero keeps familiarity while enabling a clear scroll narrative.
+Alternatives:
+Keep only three sections and place social links in the hero; rejected because the links become less intentional and easier to miss.
+
+## Decision: Black-first cosmic palette while preserving animated universe identity
+Context:
+The visual direction requested a darker black background with dark-purple accents, but stars/cosmic atmosphere had to remain.
+Decision:
+Introduce reusable cosmic color tokens and minimalist no-card section styling in `src/app/globals.css`, and tune `src/components/layout/GalaxyBackground.tsx` gradients/clouds toward near-black with restrained purple glow.
+Reasoning:
+This keeps the current animated canvas system, preserves the universe identity, and matches the requested direct-on-page section presentation.
+Alternatives:
+Replace the animated background with a static gradient or image; rejected because it loses the existing starfield identity.
+
+## Decision: Home page feature componentization over monolithic page file
+Context:
+The home page refresh required multiple sections and repeated UI patterns, and the request explicitly asked for reusable tiny components.
+Decision:
+Split home implementation into small feature components under `src/features/home/` and keep `src/app/page.tsx` as a thin composition layer.
+Reasoning:
+This improves maintainability, reduces page-level complexity, and supports iterative section tuning without a single large file.
+Alternatives:
+Keep all markup/styles in `src/app/page.tsx`; rejected because it scales poorly and violates local guidance.
+
