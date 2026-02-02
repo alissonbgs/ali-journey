@@ -37,7 +37,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "Fullstack Engineer",
     company: "Find My Profession Inc.",
     dateRange: "2021 — 2022",
-    summary: "Shipped customer dashboards and design systems for B2B SaaS.",
+    summary: "Implemented and maintained PHP/Node.js APIs, migrated legacy MySQL data with SQL scripts, built AngularJS UI/UX, maintained React interfaces, and worked directly with clients on software design.",
     stackSummary: "PHP, MySQL, NodeJS, MongoDB, AngularJS, ReactJS",
     technologies: [
       { name: "react", label: "React" },
@@ -49,8 +49,11 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "javascript", label: "JavaScript" },
     ],
     highlights: [
-      "Modular dashboard builder for enterprise clients.",
-      "Design system migration with tokenized theming.",
+      "Implemented and maintained RESTful APIs with PHP and Node.js.",
+      "Migrated a large portion of legacy database data with MySQL SQL scripts.",
+      "Designed and implemented UI/UX with AngularJS.",
+      "Maintained React.js-based user interfaces.",
+      "Collaborated directly with clients on software design decisions.",
     ],
   },
   {
@@ -58,7 +61,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "System Analyst",
     company: "Smarkio (Zenvia)",
     dateRange: "2019 — 2021",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Accelerated chatbot delivery with a Node.js/WebSocket flow builder, improved dashboard data visualization, maintained PHP/CodeIgniter APIs, built internal Node.js libraries, and implemented Jest unit tests.",
     stackSummary: "PHP, CodeIgniter, NodeJS, Express, Jest, AWS, Docker",
     technologies: [
       { name: "php", label: "PHP" },
@@ -70,8 +73,11 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "express", label: "Express" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Increased chatbot creation velocity by designing and implementing a chatbot flow builder (Node.js, WebSocket, Docker).",
+      "Increased data visualization through browser dashboards (PHP, JavaScript, jQuery).",
+      "Maintained and extended APIs (PHP, CodeIgniter).",
+      "Built internal Node.js libraries for company-wide use.",
+      "Implemented unit tests with Jest.",
     ],
   },
   {
@@ -79,7 +85,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "IT internt",
     company: "Embraer S.A.",
     dateRange: "2018 — 2019",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Improved aircraft-part 3D model creation and issue detection through CATIA automation, developed VB.NET Excel I/O tools, and built a PHP server with SAP EWM integration to store and manipulate 3D data.",
     stackSummary: "PHP, Javascript, C#, MySQL",
     technologies: [
       { name: "php", label: "PHP" },
@@ -88,8 +94,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "mysql", label: "MySQL" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Improved aircraft-part creation and issue detection time through automated 3D model software processes (CATIA, VB.NET).",
+      "Developed Excel automation tools for I/O processes (C#, VB.NET).",
+      "Created a server to store and manipulate 3D software data (PHP, Javascript, MySQL).",
     ],
   },
   {
@@ -97,7 +104,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "Volunteer Developer",
     company: "Black Bee Drones",
     dateRange: "2017 — 2018",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Developed and maintained C++ and Python code, built OpenCV-based computer vision features for drone competitions, and researched TensorFlow approaches for computer vision algorithms.",
     stackSummary: "C++, Python, Tensorflow, Opencv",
     technologies: [
       { name: "cplusplus", label: "C++" },
@@ -106,8 +113,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "opencv", label: "Opencv" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Developed and maintained C++ and Python code.",
+      "Built OpenCV-based computer vision features for drone competition.",
+      "Researched TensorFlow approaches for computer vision algorithms.",
     ],
   },
 ];

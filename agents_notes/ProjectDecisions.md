@@ -114,3 +114,13 @@ Supabase provides hosted realtime channels, built-in auth, and a Postgres store 
 Alternatives:
 Custom Postgres + Redis presence with AWS WebSocket or self-hosted WebSocket/SSE.
 
+## Decision: Journey role update as content-only summary and highlights edit
+Context:
+The Journey page had generic descriptions for older roles, and the update request explicitly preserved dates, company names, stack summaries, and technologies.
+Decision:
+Apply a content-only patch to `summary` and `highlights` fields in `src/features/journey/data.ts` for `find-my-profession`, `smarkio`, `embraer`, and `black-bee-drones`, while keeping `globant1` unchanged.
+Reasoning:
+This satisfies the user request with the smallest safe change and avoids accidental regression in timeline or stack metadata.
+Alternatives:
+Move job content to another source; out of scope for this request.
+

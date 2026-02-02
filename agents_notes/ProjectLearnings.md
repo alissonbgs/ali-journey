@@ -109,3 +109,11 @@ Example:
 When to use:
 When UI elements need enter/exit animations that should control unmount timing without custom timers.
 
+## Learning: Journey experience edits should target data fields only
+Explanation:
+The Journey page is driven by `src/features/journey/data.ts`, so role content changes can be done safely by editing only each entry's `summary` and `highlights` while leaving timeline/company/stack/technologies intact.
+Example:
+For the `update-journey-job-info` change, `summary` and `highlights` were updated for `find-my-profession`, `smarkio`, `embraer`, and `black-bee-drones`; `globant1` and protected fields were unchanged.
+When to use:
+When refreshing portfolio role narratives without changing UI behavior or structured metadata.
+
