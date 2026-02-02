@@ -121,7 +121,7 @@ When refreshing portfolio role narratives without changing UI behavior or struct
 Explanation:
 For multi-section portfolio pages, keep `src/app/page.tsx` minimal and compose reusable pieces from a feature folder, while centralizing shared typography/spacing/link styles in `src/app/globals.css`.
 Example:
-The home refresh uses `src/features/home/*` for hero, section heading, list rendering, and social links, with sections rendered directly on the page surface (no card backgrounds).
+The home refresh uses `src/features/home/*` for hero, section heading, list rendering, and section action links, with sections rendered directly on the page surface (no card backgrounds).
 When to use:
 When page complexity grows and you need consistent styling plus easy iteration without monolithic route files.
 

@@ -58,7 +58,7 @@ const createBackground = (
 
   context.scale(dpr, dpr);
 
-  context.fillStyle = "#010104";
+  context.fillStyle = "#000000";
   context.fillRect(0, 0, width, height);
 
   const glow = context.createRadialGradient(
@@ -69,9 +69,9 @@ const createBackground = (
     height * 0.3,
     Math.max(width, height) * 0.7,
   );
-  glow.addColorStop(0, "rgba(96, 56, 176, 0.18)");
-  glow.addColorStop(0.45, "rgba(52, 30, 100, 0.14)");
-  glow.addColorStop(1, "rgba(1, 1, 4, 0)");
+  glow.addColorStop(0, "rgba(90, 56, 165, 0.08)");
+  glow.addColorStop(0.45, "rgba(40, 24, 78, 0.06)");
+  glow.addColorStop(1, "rgba(0, 0, 0, 0)");
   context.fillStyle = glow;
   context.fillRect(0, 0, width, height);
 
@@ -83,9 +83,9 @@ const createBackground = (
     height * 0.65,
     Math.max(width, height) * 0.55,
   );
-  nebula.addColorStop(0, "rgba(114, 64, 196, 0.14)");
-  nebula.addColorStop(0.52, "rgba(52, 24, 110, 0.12)");
-  nebula.addColorStop(1, "rgba(1, 1, 4, 0)");
+  nebula.addColorStop(0, "rgba(90, 52, 158, 0.07)");
+  nebula.addColorStop(0.52, "rgba(42, 20, 84, 0.05)");
+  nebula.addColorStop(1, "rgba(0, 0, 0, 0)");
   context.fillStyle = nebula;
   context.fillRect(0, 0, width, height);
 
@@ -94,9 +94,9 @@ const createBackground = (
     const y = Math.random() * height;
     const radius = (Math.random() * 0.25 + 0.15) * Math.max(width, height);
     const cloud = context.createRadialGradient(x, y, 0, x, y, radius);
-    cloud.addColorStop(0, "rgba(118, 82, 208, 0.05)");
-    cloud.addColorStop(0.42, "rgba(62, 36, 122, 0.04)");
-    cloud.addColorStop(1, "rgba(1, 1, 4, 0)");
+    cloud.addColorStop(0, "rgba(110, 78, 186, 0.025)");
+    cloud.addColorStop(0.42, "rgba(52, 30, 103, 0.02)");
+    cloud.addColorStop(1, "rgba(0, 0, 0, 0)");
     context.fillStyle = cloud;
     context.fillRect(0, 0, width, height);
   }
@@ -170,7 +170,7 @@ export default function GalaxyBackground() {
       }
 
       context.clearRect(0, 0, width, height);
-      context.fillStyle = "#010104";
+      context.fillStyle = "#000000";
       context.fillRect(0, 0, width, height);
 
       if (backgroundRef.current) {

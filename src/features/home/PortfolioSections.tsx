@@ -1,8 +1,13 @@
 import ChipList from "./ChipList";
+import SectionActionLink from "./SectionActionLink";
 import SectionHeading from "./SectionHeading";
-import SocialLinks from "./SocialLinks";
 import TextList from "./TextList";
-import { interests, socialLinks, softSkills, techExpertise } from "./content";
+import {
+  futureFocus,
+  interestsAndCuriosities,
+  techExpertise,
+  techResumeHighlights,
+} from "./content";
 
 export default function PortfolioSections() {
   return (
@@ -14,51 +19,41 @@ export default function PortfolioSections() {
       >
         <SectionHeading
           headingId="home-tech-title"
-          kicker="Tech Info"
-          title="Career and technologies I build with."
-          description="I design and deliver robust software from API architecture to polished frontend experience, balancing speed, quality, and long-term maintainability."
+          kicker="Tech Stack Resume"
+          title="Core expertise across backend, frontend, and product delivery."
+          description="A practical stack built through real production software, with focus on reliable architecture and user-centered execution."
         />
+        <TextList items={techResumeHighlights} />
         <ChipList items={techExpertise} />
+        <SectionActionLink href="/journey" label="Open Journey" />
       </section>
 
       <section
-        aria-labelledby="home-soft-skills-title"
+        aria-labelledby="home-future-title"
         className="home-vertical-section"
-        id="home-soft-skills"
+        id="home-future-view"
       >
         <SectionHeading
-          headingId="home-soft-skills-title"
-          kicker="Soft Skills"
-          title="Communication and teaching in real project contexts."
+          headingId="home-future-title"
+          kicker="Future View"
+          title="Node + React growth path for future projects and studies."
+          description="I am investing in advanced patterns, performance, and product-oriented experiments to push my next level."
         />
-        <TextList items={softSkills} />
+        <TextList items={futureFocus} />
+        <SectionActionLink href="/tools" label="Open Cool Tools" />
       </section>
 
       <section
         aria-labelledby="home-interests-title"
-        className="home-vertical-section"
+        className="home-vertical-section border-b-0"
         id="home-interests"
       >
         <SectionHeading
           headingId="home-interests-title"
           kicker="Interests"
-          title="Creative areas that keep my engineering mindset fresh."
+          title="Interests and personal curiosities."
         />
-        <TextList items={interests} />
-      </section>
-
-      <section
-        aria-labelledby="home-connect-title"
-        className="home-vertical-section border-b-0"
-        id="home-connect"
-      >
-        <SectionHeading
-          headingId="home-connect-title"
-          kicker="Connect"
-          title="Let’s keep in touch."
-          description="Find my latest work, projects, and professional updates on these platforms."
-        />
-        <SocialLinks links={socialLinks} />
+        <TextList items={interestsAndCuriosities} />
       </section>
     </div>
   );

@@ -154,3 +154,13 @@ This improves maintainability, reduces page-level complexity, and supports itera
 Alternatives:
 Keep all markup/styles in `src/app/page.tsx`; rejected because it scales poorly and violates local guidance.
 
+## Decision: Home page section refinement for minimalist professional flow
+Context:
+After reviewing the first refresh iteration, the section cards and extra Connect block were heavier than requested.
+Decision:
+Refine the home page to three direct-on-page sections (Tech Stack Resume, Future View, Interests/Curiosities), remove card backgrounds, remove the hero Journey button, and use section-level actions for Journey and Cool Tools.
+Reasoning:
+This keeps the page cleaner, preserves the old hero, and aligns the visual hierarchy with the requested minimalist/professional concept.
+Alternatives:
+Keep the Connect section and social links; rejected to reduce visual density and section sprawl.
+

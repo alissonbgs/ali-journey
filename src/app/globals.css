@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #020205;
+  --background: #000000;
   --foreground: #f6f2ff;
-  --cosmic-purple: #7d55ea;
-  --cosmic-muted: rgba(246, 242, 255, 0.76);
-  --cosmic-faint: rgba(163, 134, 224, 0.22);
+  --cosmic-purple: #6848c8;
+  --cosmic-muted: rgba(246, 242, 255, 0.74);
+  --cosmic-faint: rgba(130, 98, 196, 0.18);
 }
 
 @theme inline {
@@ -57,7 +57,7 @@ h3 {
 .home-page {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.75rem;
   padding-bottom: 4rem;
 }
 
@@ -71,12 +71,12 @@ h3 {
 }
 
 .home-vertical-section {
-  min-height: clamp(24rem, 62vh, 38rem);
+  min-height: clamp(21rem, 58vh, 34rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-bottom: 1px solid var(--cosmic-faint);
-  padding: 2.5rem 0;
+  padding: 1.7rem 0;
 }
 
 .home-kicker {
@@ -109,7 +109,7 @@ h3 {
 
 .home-text-list {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.75rem;
 }
 
 .home-text-item {
@@ -131,24 +131,6 @@ h3 {
   background: var(--cosmic-purple);
 }
 
-.home-pill-button {
-  border: 1px solid rgba(195, 168, 255, 0.32);
-  border-radius: 999px;
-  background: rgba(56, 35, 99, 0.22);
-  padding: 0.56rem 1.1rem;
-  color: #ffffff;
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.home-pill-button:hover {
-  border-color: rgba(230, 210, 255, 0.66);
-  background: rgba(88, 56, 151, 0.3);
-}
-
 .home-scroll-link {
   display: inline-flex;
   align-items: center;
@@ -164,60 +146,45 @@ h3 {
   color: #ffffff;
 }
 
-.home-social-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.home-social-link {
+.home-section-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  border: 1px solid rgba(190, 156, 255, 0.35);
+  justify-content: center;
+  border: 1px solid rgba(176, 142, 246, 0.4);
   border-radius: 999px;
   background: transparent;
-  padding: 0.62rem 1rem;
+  padding: 0.52rem 0.95rem;
   color: #ffffff;
-  font-size: 0.84rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
-.home-social-link:hover {
+.home-section-link:hover {
   border-color: rgba(228, 207, 255, 0.74);
   color: #efe6ff;
+  text-decoration: none;
 }
 
-.ufo-wiggle {
-  display: block;
-  transform-origin: 50% 50%;
-  animation: ufo-wiggle 2.6s ease-in-out infinite;
-}
-
-@keyframes ufo-wiggle {
-  0%,
-  100% {
-    transform: rotate(-28deg);
-  }
-  50% {
-    transform: rotate(28deg);
-  }
+.home-section-link:focus-visible {
+  outline: 2px solid rgba(228, 207, 255, 0.74);
+  outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
   .home-page {
-    gap: 2.25rem;
+    gap: 1rem;
   }
 
   .home-vertical-section {
-    min-height: clamp(28rem, 64vh, 42rem);
-    padding: 3.25rem 0;
+    min-height: clamp(24rem, 56vh, 35rem);
+    padding: 2.2rem 0;
   }
 
   .home-text-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
   }
 }

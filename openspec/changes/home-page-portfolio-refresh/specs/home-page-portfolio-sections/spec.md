@@ -19,26 +19,19 @@ The home page SHALL preserve the original hero-style introduction at the top and
 - **THEN** the page scrolls to the portfolio sections area below.
 
 ### Requirement: Home page includes required portfolio content sections
-The home page SHALL include clear sections for Tech Info, Soft Skills, and Interests.
+The home page SHALL include clear sections for Tech Stack Resume and Expertise, Future View and Aiming, and Interests/Personal Curiosities.
 
-#### Scenario: Tech Info section content is present
-- **WHEN** the visitor views the Tech Info area
+#### Scenario: Tech stack section content is present
+- **WHEN** the visitor views the tech stack area
 - **THEN** the section presents career summary and technologies with expertise context.
 
-#### Scenario: Soft Skills section content is present
-- **WHEN** the visitor views the Soft Skills area
-- **THEN** the section includes communication and teaching skills.
+#### Scenario: Future view section content is present
+- **WHEN** the visitor views the future view area
+- **THEN** the section includes Node and React project/study direction.
 
-#### Scenario: Interests section content is present
-- **WHEN** the visitor views the Interests area
-- **THEN** the section includes game development, music production, and sports.
-
-### Requirement: Home page includes a Connect section for profile actions
-The home page SHALL include a dedicated final Connect section to surface profile links and contact intent.
-
-#### Scenario: Connect section is positioned as closing section
-- **WHEN** the visitor scrolls through the home page sections
-- **THEN** the Connect area appears as the final section in the vertical flow.
+#### Scenario: Interests and curiosities section content is present
+- **WHEN** the visitor views the interests area
+- **THEN** the section includes personal interests and curiosity-driven items.
 
 ### Requirement: Portfolio sections render directly on the page without card containers
 The portfolio content sections SHALL not use card-like background containers; content MUST render directly on the page surface with minimalist spacing/dividers.

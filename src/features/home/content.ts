@@ -1,5 +1,3 @@
-import type { SocialLink } from "./types";
-
 export const techExpertise = [
   "TypeScript",
   "Node.js",
@@ -14,29 +12,21 @@ export const techExpertise = [
   "Kafka",
 ];
 
-export const softSkills = [
-  "Clear communication with clients and engineering teams.",
-  "Teaching mindset through mentoring, pairing, and practical knowledge sharing.",
-  "Ownership across product thinking, implementation, and delivery.",
+export const techResumeHighlights = [
+  "Solid fullstack delivery across API design, product UI, and production reliability.",
+  "Hands-on experience connecting architecture decisions with product outcomes.",
+  "Focus on clean, maintainable systems that scale with team growth.",
 ];
 
-export const interests = [
-  "Game development and interactive systems.",
-  "Music production and sound design.",
-  "Sports as discipline, focus, and creativity fuel.",
+export const futureFocus = [
+  "Building deeper Node.js architecture patterns for high-throughput products.",
+  "Advancing React and Next.js UI systems for scalable design and DX.",
+  "Shipping practical side projects that combine product thinking with performance.",
 ];
 
-export const socialLinks: SocialLink[] = [
-  {
-    label: "GitHub",
-    href: "https://github.com/alissonbgs",
-    ariaLabel: "Visit Alisson Godoy GitHub profile",
-    platform: "github",
-  },
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/alissonsabino",
-    ariaLabel: "Visit Alisson Godoy LinkedIn profile",
-    platform: "linkedin",
-  },
+export const interestsAndCuriosities = [
+  "Game development experiments with systems, mechanics, and interaction loops.",
+  "Music production as a creative space for rhythm, composition, and sound texture.",
+  "Sports as a source of discipline, energy, and mental reset.",
+  "Curiosity-driven learning habit: build, test, reflect, improve.",
 ];

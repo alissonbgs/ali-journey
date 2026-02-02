@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowDownIcon, FlyingSaucerIcon } from "@phosphor-icons/react/ssr";
+import { ArrowDownIcon } from "@phosphor-icons/react/ssr";
 
 type HeroSectionProps = {
   scrollTargetId: string;
@@ -24,21 +23,10 @@ export default function HeroSection({ scrollTargetId }: HeroSectionProps) {
         Fullstack Software Engineer passionated for creating beautiful and easy
         to use applications end to end.
       </p>
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-        <Link
-          className="home-pill-button inline-flex items-center gap-3"
-          href="/journey"
-        >
-          <span className="inline-flex h-6 w-6 items-center justify-center text-white">
-            <FlyingSaucerIcon size={20} weight="light" className="ufo-wiggle" />
-          </span>
-          <span>Know my journey</span>
-        </Link>
-        <a className="home-scroll-link" href={`#${scrollTargetId}`}>
-          <span>Scroll to profile</span>
-          <ArrowDownIcon size={16} weight="bold" />
-        </a>
-      </div>
+      <a className="home-scroll-link mt-8" href={`#${scrollTargetId}`}>
+        <span>Scroll to profile</span>
+        <ArrowDownIcon size={16} weight="bold" />
+      </a>
     </section>
   );
 }
