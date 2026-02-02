@@ -49,8 +49,11 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "javascript", label: "JavaScript" },
     ],
     highlights: [
-      "Modular dashboard builder for enterprise clients.",
-      "Design system migration with tokenized theming.",
+      "Implemented and maintained RESTful APIs with PHP and Node.js.",
+      "Migrated a large portion of legacy database data with MySQL SQL scripts.",
+      "Designed and implemented UI/UX with AngularJS.",
+      "Maintained React.js-based user interfaces.",
+      "Collaborated directly with clients on software design decisions.",
     ],
   },
   {
@@ -70,8 +73,11 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "express", label: "Express" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Increased chatbot creation velocity by designing and implementing a chatbot flow builder (Node.js, WebSocket, Docker).",
+      "Increased data visualization through browser dashboards (PHP, JavaScript, jQuery).",
+      "Maintained and extended APIs (PHP, CodeIgniter).",
+      "Built internal Node.js libraries for company-wide use.",
+      "Implemented unit tests with Jest.",
     ],
   },
   {
@@ -88,8 +94,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "mysql", label: "MySQL" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Improved aircraft-part creation and issue detection time through automated 3D model software processes (CATIA, VB.NET).",
+      "Developed Excel automation tools for I/O processes (C#, VB.NET).",
+      "Created a server to store and manipulate 3D software data (PHP, Javascript, MySQL).",
     ],
   },
   {
@@ -106,8 +113,9 @@ export const journeyEntries: JourneyEntry[] = [
       { name: "opencv", label: "Opencv" },
     ],
     highlights: [
-      "Internal API gateway with auditing and rate limiting.",
-      "Developer CLI for environment provisioning.",
+      "Developed and maintained C++ and Python code.",
+      "Built OpenCV-based computer vision features for drone competition.",
+      "Researched TensorFlow approaches for computer vision algorithms.",
     ],
   },
 ];

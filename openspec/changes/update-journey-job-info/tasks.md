@@ -1,7 +1,8 @@
-## 1. Update Journey role summary content
+## 1. Update Journey role content
 
 - [x] 1.1 Edit `src/features/journey/data.ts` and replace only `summary` text for `find-my-profession`, `smarkio`, `embraer`, and `black-bee-drones` based on provided highlights.
 - [x] 1.2 Confirm the `globant1` entry remains unchanged.
+- [x] 1.3 Edit `src/features/journey/data.ts` and replace `highlights` arrays for `find-my-profession`, `smarkio`, `embraer`, and `black-bee-drones` based on provided role details.
 
 ## 2. Preserve protected fields
 
