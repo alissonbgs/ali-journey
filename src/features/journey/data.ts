@@ -37,7 +37,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "Fullstack Engineer",
     company: "Find My Profession Inc.",
     dateRange: "2021 — 2022",
-    summary: "Shipped customer dashboards and design systems for B2B SaaS.",
+    summary: "Implemented and maintained PHP/Node.js APIs, migrated legacy MySQL data with SQL scripts, built AngularJS UI/UX, maintained React interfaces, and worked directly with clients on software design.",
     stackSummary: "PHP, MySQL, NodeJS, MongoDB, AngularJS, ReactJS",
     technologies: [
       { name: "react", label: "React" },
@@ -58,7 +58,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "System Analyst",
     company: "Smarkio (Zenvia)",
     dateRange: "2019 — 2021",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Accelerated chatbot delivery with a Node.js/WebSocket flow builder, improved dashboard data visualization, maintained PHP/CodeIgniter APIs, built internal Node.js libraries, and implemented Jest unit tests.",
     stackSummary: "PHP, CodeIgniter, NodeJS, Express, Jest, AWS, Docker",
     technologies: [
       { name: "php", label: "PHP" },
@@ -79,7 +79,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "IT internt",
     company: "Embraer S.A.",
     dateRange: "2018 — 2019",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Improved aircraft-part 3D model creation and issue detection through CATIA automation, developed VB.NET Excel I/O tools, and built a PHP server with SAP EWM integration to store and manipulate 3D data.",
     stackSummary: "PHP, Javascript, C#, MySQL",
     technologies: [
       { name: "php", label: "PHP" },
@@ -97,7 +97,7 @@ export const journeyEntries: JourneyEntry[] = [
     position: "Volunteer Developer",
     company: "Black Bee Drones",
     dateRange: "2017 — 2018",
-    summary: "Built APIs and tooling that improved developer velocity.",
+    summary: "Developed and maintained C++ and Python code, built OpenCV-based computer vision features for drone competitions, and researched TensorFlow approaches for computer vision algorithms.",
     stackSummary: "C++, Python, Tensorflow, Opencv",
     technologies: [
       { name: "cplusplus", label: "C++" },

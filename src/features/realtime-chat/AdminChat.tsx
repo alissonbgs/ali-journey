@@ -148,17 +148,17 @@ const useOwnerPresence = (
     ];
 
     events.forEach((eventName) =>
-      window.addEventListener(eventName, markActive),
+      globalThis.addEventListener(eventName, markActive),
     );
 
     sendHeartbeat().catch(() => undefined);
-    const interval = window.setInterval(sendHeartbeat, PRESENCE_HEARTBEAT_MS);
+    const interval = globalThis.setInterval(sendHeartbeat, PRESENCE_HEARTBEAT_MS);
 
     return () => {
       events.forEach((eventName) =>
-        window.removeEventListener(eventName, markActive),
+        globalThis.removeEventListener(eventName, markActive),
       );
-      window.clearInterval(interval);
+      globalThis.clearInterval(interval);
     };
   }, [isOwner, supabase]);
 };
@@ -554,12 +554,13 @@ export default function AdminChat() {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
     const redirectTo = siteUrl
       ? `${siteUrl}/admin/chat`
-      : window.location.href;
+      : globalThis.location.href;
 
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmed,
       options: { emailRedirectTo: redirectTo },
     });
+
     if (error) {
       setAuthError("Could not send magic link.");
       return;
